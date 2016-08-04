@@ -812,6 +812,8 @@ if __name__ == '__main__':
 						print genTLSA(args.host, args.protocol, args.port, cert, 'rfc', args.usage, args.selector, args.mtype)
 					else:
 						print genTLSA(args.host, args.protocol, args.port, cert, args.output, args.usage, args.selector, args.mtype)
+					# Done here Cleanup for next round
+					cert=None
 
 				# Clear the cert from memory (to stop M2Crypto from segfaulting)
 				# And cleanup the connection and context
